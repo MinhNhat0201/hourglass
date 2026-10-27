@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Hourglass",
+    "slug": "hourglass",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.hourglass.timer"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F2EC",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "app.hourglass.timer",
+      "permissions": [
+        "android.permission.USE_EXACT_ALARM",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-audio",
+      "expo-localization",
+      [
+        "expo-notifications",
+        {
+          "color": "#9C6C3A",
+          "sounds": [
+            "./assets/sounds/chime.wav",
+            "./assets/sounds/bell.wav",
+            "./assets/sounds/soft.wav"
+          ],
+          "enableRemoteNotifications": false
+        }
+      ],
+      "expo-screen-orientation"
+    ],
+    "scheme": "hourglass",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
